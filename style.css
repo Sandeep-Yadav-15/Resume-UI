@@ -5,8 +5,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(135deg, #1a202c, #2d3748); /* Dark gradient background */
-    color: #f7fafc; /* Light text color for contrast */
+    background: linear-gradient(135deg, #1a202c, #2d3748);
+    color: #f7fafc;
     overflow-x: hidden;
 }
 
@@ -18,16 +18,16 @@ body {
     height: 100vh;
     text-align: center;
     padding: 30px;
-    background: rgba(0, 0, 0, 0.5); /* Slight transparency for depth */
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 h1 {
     font-size: 3.8rem;
     margin-bottom: 20px;
-    color: #edf2f7; /* Very light color for readability */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Glow effect */
+    color: #edf2f7;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     font-weight: 600;
 }
 
@@ -36,7 +36,7 @@ p {
     margin-bottom: 40px;
     line-height: 1.8;
     max-width: 650px;
-    color: #e2e8f0; /* Slightly muted light grey for readability */
+    color: #e2e8f0;
     font-weight: 400;
 }
 
@@ -45,20 +45,20 @@ p {
     padding: 18px 45px;
     font-size: 1.3rem;
     color: #fff;
-    background-color: #4fd1c5; /* Soft teal color */
+    background-color: #4fd1c5;
     border: none;
-    border-radius: 35px; /* Rounded button */
+    border-radius: 35px;
     text-transform: uppercase;
     font-weight: bold;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Dark shadow */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
 }
 
 .resume-button:hover {
-    background-color: #38b2ac; /* Darker teal on hover */
-    box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.4); /* More prominent shadow */
+    background-color: #38b2ac;
+    box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.4);
     transform: translateY(-7px);
 }
 
@@ -72,13 +72,13 @@ footer {
     width: 100%;
     text-align: center;
     font-size: 0.9rem;
-    color: #cbd5e0; /* Light grey text */
+    color: #cbd5e0;
 }
 
 .animated-arrow {
     margin-top: 30px;
     font-size: 2.5rem;
-    color: #4fd1c5; /* Soft teal for consistency */
+    color: #4fd1c5;
     animation: bounce-up 2s infinite;
     cursor: pointer;
 }
@@ -88,21 +88,133 @@ footer {
         transform: translateY(0);
     }
     40% {
-        transform: translateY(-12px); /* Move arrow up */
+        transform: translateY(-12px);
     }
     60% {
-        transform: translateY(-6px); /* Smooth bounce effect */
+        transform: translateY(-6px);
     }
 }
 
 .animated-arrow:hover {
-    color: #38b2ac; /* Darker teal on hover */
+    color: #38b2ac;
     transform: scale(1.15);
     animation: none;
 }
 
-/* Add smooth page transition effect */
-* {
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+/* Media Queries for Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+
+    .resume-button {
+        padding: 15px 35px;
+        font-size: 1.1rem;
+    }
+
+    .animated-arrow {
+        font-size: 2rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablets and Small Screens */
+@media (max-width: 1024px) {
+    .container {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+
+    .resume-button {
+        padding: 16px 40px;
+        font-size: 1.2rem;
+    }
+
+    .animated-arrow {
+        font-size: 2.2rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Large Screens and Desktops */
+@media (min-width: 1025px) {
+    .container {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 3.8rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        max-width: 650px;
+    }
+
+    .resume-button {
+        padding: 18px 45px;
+        font-size: 1.3rem;
+    }
+
+    .animated-arrow {
+        font-size: 2.5rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
+/* Very Large Screens (Desktops, TVs) */
+@media (min-width: 1600px) {
+    .container {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        max-width: 750px;
+    }
+
+    .resume-button {
+        padding: 20px 50px;
+        font-size: 1.5rem;
+    }
+
+    .animated-arrow {
+        font-size: 3rem;
+    }
+
+    footer {
+        font-size: 1.1rem;
+    }
 }
